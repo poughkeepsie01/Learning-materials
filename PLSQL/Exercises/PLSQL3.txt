@@ -1,0 +1,4 @@
+Create an program that will create the output below:
+
+1. User input: Juan	
+   Expected output: nauJ

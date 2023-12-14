@@ -1,0 +1,100 @@
+1. Display the following output. User For-Cursor Loop.
+
+anonymous block completed
+Employees From Dept. 30 : 
+114 - Raphaely
+115 - Khoo
+116 - Baida
+117 - Tobias
+118 - Himuro
+119 - Colmenares
+
+2. Display the following output. Use explicit cursor. Apply the explicit cursor steps.
+                (OPEN, FETCH, EXIT, CLOSE). Manually define the column variables. Do not use %ROWTYPE.
+
+anonymous block completed
+Employees From Dept. 30 : 
+114 - Raphaely
+115 - Khoo
+116 - Baida
+117 - Tobias
+118 - Himuro
+119 - Colmenares
+
+3. Create an anonymous block that will ask the user for an employee id.
+                Display the following output. Use explicit cursor and manually define the variables.
+                
+User Input: 12345
+anonymous block completed
+No data found for the inputted employee id.
+
+User Input: 200
+anonymous block completed
+Firs Name: Jennifer
+Last Name: Whalen
+
+4. Create an anonymous pl/sql block with exception. The block should handle the too_many_rows
+                and no_data_found exception. If no errors or exception is raised, display the employee's
+                last_name, job_id, and salary. User should input the employee_id. Refer the output below.
+
+User Input: 30
+anonymous block completed
+Too many rows.
+
+User Input: 10
+anonymous block completed
+Last Name: Whalen Job Id: AD_ASST Salary: 4400
+
+User Input: 505050
+anonymous block completed
+No data found.
+
+5. Modify your pl/sql block in number 2. This time, use %ROWTYPE of your declared cursor.
+
+anonymous block completed
+Employees From Dept. 30 : 
+114 - Raphaely
+115 - Khoo
+116 - Baida
+117 - Tobias
+118 - Himuro
+119 - Colmenares
+
+6. Create a procedure named myProcedure. Your procedure should display the sysdate.
+                Call your procedure from an anonymous pl/sql block.
+                
+PROCEDURE myProcedure Compiled.
+anonymous block completed
+Today is : 11-JAN-11
+
+7. Create a parameterized function named myFunction (empid). Your function should return the following output.
+----Not sure if parameter was supposed to be employee id----
+----empid is entered by the user but fname and lname are hardcoded parameters, this would result to a conflict.----
+----
+
+                Call your function from an anonymous pl/sql block. Your anonymous pl/sql block  must
+                contain an exception handler if no data were retrieved. Employee id is an user input.
+
+User Input: 9999
+anonymous block completed
+No record/s found.
+
+User Input : 200
+anonymous block completed
+Good day ! Jennifer Whalen
+
+8. Modify the following function to remove the warnings in compilation.
+
+CREATE OR REPLACE FUNCTION isEven(p_input IN NUMBER)
+RETURN BOOLEAN
+AS
+  v_result VARCHAR2(10);
+BEGIN
+  IF (p_input MOD 2) = 0 THEN
+    v_result := 'TRUE';
+  ELSE
+    v_result := 'FALSE';
+  END IF;
+  
+  RETURN v_result;
+END isFunction;

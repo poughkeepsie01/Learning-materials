@@ -1,0 +1,110 @@
+1. Display the last name and salary from employees table where job_id = 'AD_PRES'.
+
+Last Name: King Salary: 24000
+
+2. Display the total number of employees in department 50.
+
+anonymous block completed
+Total Number of Employees in Dept. 20 : 2
+
+3. Display the following result.
+
+anonymous block completed
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+1 x 4 = 4
+1 x 5 = 5
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+4 x 1 = 4
+4 x 2 = 8
+4 x 3 = 12
+4 x 4 = 16
+4 x 5 = 20
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+
+4. Display the following result.
+
+anonymous block completed
+The Odd Numbers From 1 to 25 : 
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+
+5. Create an anonymous block that will retrieve the first name and last name of an employee based on its employee id. Employee id must be inputted by the user.
+
+anonymous block completed
+First Name: Jennifer Last Name: Whalen
+
+6. Update the employees table and set the salary of employees belonging to department id 20 to 12345.
+Display the number of records affected using implicit cursor attributes. Issue a rollback statement after displaying the affected records.
+
+anonymous block completed
+Updated : 2 record/s
+
+7. Display the follwing output.
+
+anonymous block completed
+1 - 10 in reverse order
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+
+8. Display the maximum employee_id in employees table.
+
+anonymous block completed
+Maximum employee id : 206
+
+
+9. Display 'Less Than 50,000' if the salary of a certain employee is less than 50,000 or 'More Than 50,000' if more than 50,000.
+User must input the employee_id. Use CASE statement.
+
+anonymous block completed
+Salary Description: Less Than 50,000
+
+10. Modify the following PLSQL block to be able to execute successfully.
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+  v_first_name  employees.first_name%TYPE;
+  v_last_name   employees.last_name%TYPE;
+  v_job_id      employees.job_id%TYPE;
+  v_gender        VARCHAR2(4);
+BEGIN
+  SELECT first_name, last_name, job_id, 'FEMALE'
+    INTO v_first_name, v_last_name, v_job_id, v_gender
+    FROM employees
+   WHERE employee_id = 200;   
+END;
